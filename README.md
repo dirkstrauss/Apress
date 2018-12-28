@@ -1,4 +1,4 @@
-﻿#Chapter 1 - C# in focus
+﻿# Chapter 1 - C# in focus
 
 ## Getting started with tuples
 Exactly what makes tupels so great? As you know, returning multiple values from a function is something you can already do in C#. Tuples simply give you another way to do this.
