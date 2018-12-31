@@ -7,13 +7,13 @@ Exactly what makes tupels so great? As you know, returning multiple values from 
 In C# 7, we now have the ability to use pattern matching. By using patterns, we can test if a value has a certain shape and if so, work with the information of that matching shape.
 
 ## Using out variables
-Xxxxx
+The out keyword in C# has been around for a while. Using out passes arguments by reference. By default, all parameters in C# are passed by value unless you explicitly include an out or ref modifier.
 
 ## Using local functions
-Xxxxx
+Local functions are private methods that are nested in another member. The use of local functions is quite common in functional languages. This has now been included in C# 7.
 
 ## Generalized async return types
-Xxxxx
+The functionality of async/await is widely used to avoid performance bottlenecks and improve the responsiveness of your application. There is a slight issue though that in certain situations, returning a Task object from async methods could introduce performance issues. This is especially evident when an async method returns a cached result or completes in a synchronous fashion. 
 
-## Throw expressions and expression bodies for accessors, constructors and finalizers
-Xxxxx
+## Throw expressions
+Before C# 7, we used throw statements. The use of throw expressions didn't exist. It sort of makes sense, because using throw as an expression would always result in an exception. Whatever the reasoning was for not including throw expressions, the evolution of C# has necessitated the inclusion of this feature. The inclusion of throw expressions is now available in C# 7 in a limited set of contexts.
