@@ -17,3 +17,6 @@ The functionality of async/await is widely used to avoid performance bottlenecks
 
 ## Throw expressions
 Before C# 7, we used throw statements. The use of throw expressions didn't exist. It sort of makes sense, because using throw as an expression would always result in an exception. Whatever the reasoning was for not including throw expressions, the evolution of C# has necessitated the inclusion of this feature. The inclusion of throw expressions is now available in C# 7 in a limited set of contexts.
+
+## Discards
+C# 7 saw the introduction of discards. This is a really welcome addition to the language. It allows you to tell the compiler that you do not care about the value of a specific variable. Discards is therefore a dummy or temporary variable that is not going to be used at all in your application.

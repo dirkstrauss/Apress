@@ -18,8 +18,23 @@ namespace AsyncReturnDemo
             }
 
             WriteLine($"Garbage collection occurred {GC.CollectionCount(0)} times");
+
+            //// Using discard variables
+            //DoSomethingAsync(5, 1).Wait();
+
             ReadLine();
-        }        
+        }
+
+        #region Using discard variables
+        public static async Task DoSomethingAsync(int valueA, int valueB)
+        {
+            WriteLine("Async started at: " + DateTime.Now);
+            _ = Task.Run(() => valueA + valueB);
+
+            await Task.Delay(5000);
+            WriteLine("Async completed at: " + DateTime.Now);
+        } 
+        #endregion
     }
 
 
@@ -105,4 +120,8 @@ namespace AsyncReturnDemo
         }
     }
 
+
+
+
+    
 }

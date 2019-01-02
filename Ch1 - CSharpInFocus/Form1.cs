@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -118,17 +119,9 @@ namespace CSharpInFocus
             */
             #endregion
 
-            try
-            {
-                Debug.WriteLine(DoSomeWork(null));
-                Debug.WriteLine(DoSomeWork("wash car"));
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
-
-            
+            #region Discards
+            UsingDiscards(); 
+            #endregion                                   
         }
 
         #region Local Functions
@@ -150,7 +143,11 @@ namespace CSharpInFocus
             Debug.WriteLine(BrandType);
             Debug.WriteLine(GuitarStringCount);
 
-
+            DeconstructingTuplesExplicit();
+            DeconstructingTuplesInferring();
+            DeconstructingTuplesIndividualInference();
+            DeconstructingTuplesIndividualInference();
+            DeconstructingTuplesPrevVariables();
         }
 
         private void InstanceTupleVariables()
@@ -200,16 +197,128 @@ namespace CSharpInFocus
             int stringsCount = 6;
             var instrument = (instrumentType, stringsCount);
         }
+
+
+        private void DeconstructingTuplesExplicit()
+        {
+            // Explicitly declare each field's type
+            TupleExample te = new TupleExample();
+            (string BrandType, int GuitarStringCount) = te.GetGuitarType(); 
+        }
+        private void DeconstructingTuplesInferring()
+        {
+            // Inferring the type of each variable with the var keyword
+            TupleExample te = new TupleExample();
+            var (BrandType, GuitarStringCount) = te.GetGuitarType();
+        }
+        private void DeconstructingTuplesIndividualInference()
+        {
+            // Inferring the type of each variable individually with the var keyword
+            TupleExample te = new TupleExample();
+            (string BrandType, var GuitarStringCount) = te.GetGuitarType();
+        }
+        private void DeconstructingTuplesPrevVariables()
+        {
+            // Deconstruct into previously declared variables
+            TupleExample te = new TupleExample();            
+            string BrandType = "";
+            int GuitarStringCount = 6;
+            (BrandType, GuitarStringCount) = te.GetGuitarType();
+        }
+
+
+
+
         #endregion
 
 
-        public string DoSomeWork(string workItem)
+        /*
+        // Explicitly declare each field's type
+            TupleExample te = new TupleExample();
+            //(string BrandType, int GuitarStringCount) = te.GetGuitarType();
+
+            //// Inferring the type of each variable with the var keyword
+            //var (BrandType, GuitarStringCount) = te.GetGuitarType();
+            //(string BrandType, var GuitarStringCount) = te.GetGuitarType();
+
+            // Deconstruct into previously declared variables
+            string BrandType = "";
+            int GuitarStringCount = 6;
+            (BrandType, GuitarStringCount) = te.GetGuitarType();
+        */
+
+        #region Using discards
+        private void UsingDiscards()
         {
-            string workToDo = workItem ?? throw new ArgumentNullException(workItem, "The workItem parameter is null");
-            return $"Work item {workToDo} assigned";
+            //// Local function
+            //(bool zeroCheck, bool maxCheck, bool inRangeCheck) DoSomething(int value)
+            //{
+            //    bool blnAboveZero = false;
+            //    bool blnBelowTwenty = false;
+            //    bool blnInRange = false;
+            //    if (value > 0)
+            //        blnAboveZero = true;
+            //    if (value <= 20)
+            //        blnBelowTwenty = true;
+            //    if (blnAboveZero && blnBelowTwenty)
+            //        blnInRange = true;
+            //    return (blnAboveZero, blnBelowTwenty, blnInRange);
+            //}
+            //// Tuple deconstruction
+            //var (isZero, isNotmax, inRange) = DoSomething(21);
+            //// Tuple deconstruction using discards
+            //var (_, _, blnValid) = DoSomething(15);
+
+
+            //// Out parameters
+            //if (bool.TryParse("true", out _))
+            //    Debug.WriteLine("The string value is a valid boolean");
+            //else
+            //    Debug.WriteLine("The string value is not a valid boolean");
+
+
+            //// Standalone discard
+            //_ = ExecuteCommand("[UPDATE table SQL]", "[sql connection string here]");
+            //// is essentailly the same as
+            //ExecuteCommand("[UPDATE table SQL]", "[sql connection string here]");
+                       
+
+            // Standalone discard
+            _ = ExecuteCommand("[UPDATE table SQL]", "[sql connection string here]");
+            //// This line will not compile because _ is an unassigned variable, it's a discard variable
+            //Debug.WriteLine($"Checks complete. The discard value is {_}");
         }
 
+        private int ExecuteCommand(string sql, string sqlConnectionString)
+        {
+            using (SqlConnection conn = new SqlConnection(sqlConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Connection.Open();
+                return cmd.ExecuteNonQuery();
+            }
+        } 
+        #endregion
     }
 
+
+    #region Throw Expressions
+    public class Square
+    {
+        public int Side { get; }
+        public string Description { get; }
+        public Square(int side, string description)
+        {
+            Side = side;
+            Description = description ?? throw new ArgumentNullException(nameof(description));
+        }
+    }
+
+    public class Rectangle
+    {
+        public string Description { get; set; }
+        public Rectangle(string description) => Description = description ?? throw new ArgumentNullException(nameof(description));
+    } 
+    #endregion
 
 }
