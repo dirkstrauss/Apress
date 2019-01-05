@@ -20,3 +20,8 @@ Before C# 7, we used throw statements. The use of throw expressions didn't exist
 
 ## Discards
 C# 7 saw the introduction of discards. This is a really welcome addition to the language. It allows you to tell the compiler that you do not care about the value of a specific variable. Discards is therefore a dummy or temporary variable that is not going to be used at all in your application.
+
+# Chapter 2 - Exploring C#
+
+## Using and Implementing Abstract Classes
+When we use the abstract modifier in a class declaration, we are actually saying that the class we are creating is only the basic base class of other classes. This means that any members marked as abstract or that are included in the base class have to be implemented by the derived classes (classes that use the base class).
