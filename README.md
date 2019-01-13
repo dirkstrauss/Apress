@@ -25,3 +25,10 @@ C# 7 saw the introduction of discards. This is a really welcome addition to the 
 
 ## Using and Implementing Abstract Classes
 When we use the abstract modifier in a class declaration, we are actually saying that the class we are creating is only the basic base class of other classes. This means that any members marked as abstract or that are included in the base class have to be implemented by the derived classes (classes that use the base class).
+
+## Using and implementing Interfaces
+In the previous section, we had a look at abstract classes. You will remember that I said that abstract classes act like a common noun that describes the derived objects. When referring to interfaces however, we are saying that some or all of the derived classes share some sort of functionality. We can thus think of interfaces as verbs that describe an action.
+
+## Asynchronous programming using async and await
+Asynchronous programming will allow you to write code that can perform long running tasks while still keeping your application responsive. With the introduction of async in the .NET Framework 4.5, it removed the previously complicated approach to implementing asynchronous functionality in your applications.
+
