@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExploringCSharp
 {
-    abstract class Vehicle
+    public abstract class Vehicle
     {
         protected int _wheelCount = 4;
         protected int _engineSize = 0;

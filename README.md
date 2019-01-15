@@ -32,3 +32,7 @@ In the previous section, we had a look at abstract classes. You will remember th
 ## Asynchronous programming using async and await
 Asynchronous programming will allow you to write code that can perform long running tasks while still keeping your application responsive. With the introduction of async in the .NET Framework 4.5, it removed the previously complicated approach to implementing asynchronous functionality in your applications.
 
+## Making use of extension methods
+Since C# 3.0, extension methods have been making a huge difference in how I use my code. I am able to add methods to existing types without creating a new derived type. The C# Programming guide describes extension methods as a special kind of static method. The only difference is that they are called as if they were instance methods on the type being extended (i.e. called by using instance method syntax).
+
+## Generics

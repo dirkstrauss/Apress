@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExploringCSharp
 {
-    class Car : Vehicle, IComparable<Car>
+    public class Car : Vehicle, IComparable<Car>
     {
         public override string VinNumber => _vinNumber;
 
