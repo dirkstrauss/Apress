@@ -39,7 +39,42 @@ namespace ExploringCSharp
     //    }
     //}
 
-    public class VehicleCarrier<T>
+
+    public class DynamicCarrier<T> : ICarrier<T>
+    {
+        private List<T> _loadbay;
+        public DynamicCarrier()
+        {
+            _loadbay = new List<T>();
+        }
+
+        public void AddVehicle(T vehicle)
+        {
+            _loadbay.Add(vehicle);
+        }
+
+        public void GetAllVehicles()
+        {
+            foreach (T vehicle in _loadbay)
+            {
+                switch (vehicle)
+                {
+                    case Car car:
+                        Console.WriteLine($"{car.GetType().Name} with VIN number {car.VinNumber} loaded");
+                        break;
+                    case SUV suv:
+                        Console.WriteLine($"{suv.GetType().Name} with VIN number {suv.VinNumber} loaded");
+                        break;
+                    default:
+                        Console.WriteLine($"Vehicle not determined");
+                        break;
+                }
+            }
+        }
+
+    }
+
+    public class VehicleCarrier<T> : ICarrier<T>
     {
         private T[] _loadbay;
         private int _capacity;
@@ -82,4 +117,6 @@ namespace ExploringCSharp
             }
         }
     }
+
+        
 }

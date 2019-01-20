@@ -36,3 +36,10 @@ Asynchronous programming will allow you to write code that can perform long runn
 Since C# 3.0, extension methods have been making a huge difference in how I use my code. I am able to add methods to existing types without creating a new derived type. The C# Programming guide describes extension methods as a special kind of static method. The only difference is that they are called as if they were instance methods on the type being extended (i.e. called by using instance method syntax).
 
 ## Generics
+Generics have been with us since C# 2. The goal was to allow developers to reuse code while maintaining type safety. Think of generics as a blueprint that will allow you to define data structures that are type safe without the commitment of actually defining a type.
+
+## Nullable types
+In C#, all reference types such as strings are nullable. In fact, null is the default value of reference type variables. This means that, while they can be null, we actually need to see the null keyword as a literal that represents a null reference. Put differently, something that does not refer to any object in .NET. With the release of C# 2.0, we were introduced to nullable value types.
+
+## Dynamic types
+With the release of C# 4.0, developers were introduced to a new dynamic type. It's a static type, but dynamic objects bypass static type checking. Think of it acting like it has a type object.
