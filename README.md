@@ -43,3 +43,7 @@ In C#, all reference types such as strings are nullable. In fact, null is the de
 
 ## Dynamic types
 With the release of C# 4.0, developers were introduced to a new dynamic type. It's a static type, but dynamic objects bypass static type checking. Think of it acting like it has a type object.
+
+# Chapter 3 - The new features of C# 8.0
+
+## XXXX
