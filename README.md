@@ -46,4 +46,20 @@ With the release of C# 4.0, developers were introduced to a new dynamic type. It
 
 # Chapter 3 - The new features of C# 8.0
 
-## XXXX
+## Nullable reference types
+You will remember from the previous chapter that in order to mark a variable as nullable, you need to use the type and ? when declaring a variable. For example, int? represents a nullable int. Now you can do the same with reference types such as string? to declare a nullable string.
+
+## Recursive patterns
+Recursive patterns are a welcome addition to C#. You will remember that in C# 7, we saw the introduction of pattern matching. C# 8.0 takes this a step further by allowing patterns to contain other patterns.
+
+## Ranges and indices
+Ranges and indicies were designed in the first few months of 2018. What C# 8.0 allows us to do with indexed data structures is grab a slice of the array, string or span.
+
+## Switch expressions
+C#8.0 introduces switch expressions where the cases are expressions. Think of it as a lightweight version of switch statements.
+
+## Target-typed new-expressions
+In the past, you would need to add the type when creating an array of Point for example. With C# 8.0, when the type is given from the context, you can omit the type in these situations.
+
+## Async streams
+xxx
