@@ -62,4 +62,7 @@ C#8.0 introduces switch expressions where the cases are expressions. Think of it
 In the past, you would need to add the type when creating an array of Point for example. With C# 8.0, when the type is given from the context, you can omit the type in these situations.
 
 ## Async streams
-xxx
+Think of a database that is queried for data which it can't return all at once. So, it needs to stream it, and the data will arrive at the calling code at certain intervals. Your code, however, wants to process this data in its own time. It is for this reason that C# 8.0 introduced IAsyncEnumerable<T> which is an asynchronous version of IEnumerable<T>.
+
+## Using declarations
+Another nice addition to C# 8.0 is the feature of simplifying using statements. Traditionally, using statements introduce a level of nesting. For simple cases, we now have using declarations in C# 8.0.

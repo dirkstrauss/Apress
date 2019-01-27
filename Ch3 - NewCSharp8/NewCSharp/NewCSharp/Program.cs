@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 using System.Drawing;
+using System.Data.SqlClient;
 
 namespace NewCSharp
 {
@@ -105,26 +106,78 @@ namespace NewCSharp
 
             //var result = species switch
             //{
-            //    Human h => $"{h.Name} is a {nameof(Human)}",
-            //    Mammal m => $"{m.Name} is a {nameof(Mammal)}",
-            //    Reptile r => $"{r.Name} is a {nameof(Reptile)}",
-            //    _ => "Species could not be determined"
+            //    Human h         => $"{h.Name} is a {nameof(Human)}",
+            //    Mammal m        => $"{m.Name} is a {nameof(Mammal)}",
+            //    Reptile r       => $"{r.Name} is a {nameof(Reptile)}",
+            //    _               => "Species could not be determined"
             //};
 
-            //WriteLine(result); 
+            //var result = species switch
+            //{
+            //    Human h                         => $"{h.Name} is a {nameof(Human)}",
+            //    Mammal m                        => $"{m.Name} is a {nameof(Mammal)}",
+            //    Reptile r when r.LaysEggs       => $"{r.Name} is a {nameof(Reptile)} that lays eggs",
+            //    Reptile r                       => $"{r.Name} is a {nameof(Reptile)}",
+            //    _                               => "Species could not be determined"
+            //};
+
+
+            //var result = species switch
+            //{
+            //    Human h                         => $"{h.Name} is a {nameof(Human)}",
+            //    Mammal m                        => $"{m.Name} is a {nameof(Mammal)}",
+            //    Reptile {LaysEggs: true } r     => $"{r.Name} is a {nameof(Reptile)} that lays eggs",
+            //    Reptile r                       => $"{r.Name} is a {nameof(Reptile)}",
+            //    _                               => "Species could not be determined"
+            //};
+
+            //var result = species switch
+            //{
+            //    Human h                             => $"{h.Name} is a {nameof(Human)}",
+            //    Mammal m                            => $"{m.Name} is a {nameof(Mammal)}",
+            //    Reptile { LaysEggs: true } r        => $"{r.Name} is a {nameof(Reptile)} that lays eggs",
+            //    Reptile { Age: var age }            => $"This {nameof(Reptile)} is {age} years old", 
+            //    _                                   => "Species could not be determined"
+            //};
+
+            //var result = species switch
+            //{
+            //    Human h                         => $"{h.Name} is a {nameof(Human)}",
+            //    Mammal m                        => $"{m.Name} is a {nameof(Mammal)}",
+            //    Reptile { LaysEggs: true } r    => $"{r.Name} is a {nameof(Reptile)} that lays eggs",
+            //    Reptile { Age: var age }        => $"This {nameof(Reptile)} is {age} years old",
+            //    { }                             => species.ToString(),
+            //    null                            => "null"
+            //};
+
+            //WriteLine(result);                                   
             #endregion
 
-            Point[] ps = { new Point(1, 4), new Point(3, 2), new Point(9, 5) };
+            #region Target-typed new-expressions
+            //Point[] ps = { new Point(1, 4), new Point(3, 2), new Point(9, 5) };
+            //Point[] ps = { new (1, 4), new (3, 2), new (9, 5) }; 
+            #endregion
 
-            //Point[] ps = { new (1, 4), new (3, 2), new (9, 5) };
+            #region Using declarations
+            ////string tsql = "[SQL QRY]";
+            ////string sqlConnStr = "[SQL Connection String]";
+            ////using (var con = new SqlConnection(sqlConnStr))
+            ////{
+            ////    SqlCommand cmd = new SqlCommand(tsql, con);
+            ////    //..
+            ////}
 
-            
+            //string tsql = "[SQL QRY]";
+            //string sqlConnStr = "[SQL Connection String]";
+            //using var con = new SqlConnection(sqlConnStr);
+            //SqlCommand cmd = new SqlCommand(tsql, con); 
+
+            //WriteLine(cmd.CommandText);
+            #endregion
+                       
+
             ReadLine();
         }
-
-
-        
-
     }
 }
 
