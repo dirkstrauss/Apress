@@ -70,4 +70,5 @@ Another nice addition to C# 8.0 is the feature of simplifying using statements. 
 # Chapter 4 - Creating responsive web applications using ASP.NET MVC
 
 ## Creating your ASP.NET MVC Application
-xxxxx
+Responsive web applications are essential in modern application development. Users need to be able to view the content of your web application on any device. This means that a web application needs to resize itself based on whatever device it is being viewed on.
+
