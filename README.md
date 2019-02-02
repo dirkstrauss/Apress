@@ -72,3 +72,6 @@ Another nice addition to C# 8.0 is the feature of simplifying using statements. 
 ## Creating your ASP.NET MVC Application
 Responsive web applications are essential in modern application development. Users need to be able to view the content of your web application on any device. This means that a web application needs to resize itself based on whatever device it is being viewed on.
 
+## Referencing jQuery and Bootstrap
+In your Solution Explorer, if you expand the App_Start folder you will see a class called BundleConfig. It is here that you will see references to CSS and JavaScript files.
+
