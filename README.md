@@ -75,3 +75,5 @@ Responsive web applications are essential in modern application development. Use
 ## Referencing jQuery and Bootstrap
 In your Solution Explorer, if you expand the App_Start folder you will see a class called BundleConfig. It is here that you will see references to CSS and JavaScript files.
 
+## Setting up and using SCSS
+SCSS is an implementation of SASS (Syntactically Awesome Style Sheets). In fact, SASS supports two types of syntax namely SCSS and SASS. The main difference between SCSS and SASS is the use of curly braces and semicolons that SCSS uses. Being used to C#, it makes more sense to use SCSS. SCSS is fully compliant with CSS, so all your existing code will still work.
