@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Tasker.Models.Task>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 task-pipeline">
+            <div><h2>Pipeline</h2></div>
+            @foreach (var item in Model)
+            {
+                <div class="task">
+                    <div class="task-id">@item.TaskID</div>
+                    <div class="task-title">@item.TaskTitle</div>
+                    <div class="task-body">@item.TaskBody</div>
+                    <div class="task-date">@item.DueDate.ToString("MMMM dd, yyyy")</div>
+                </div>
+            }
+        </div>
+        <div class="col-md-4 task-in-progress" id="inprogress">
+            <div><h2>In progress</h2></div>
+        </div>
+        <div class="col-md-4 task-completed">
+            <div><h2>Completed</h2></div>
+        </div>
+    </div>
+</div>
