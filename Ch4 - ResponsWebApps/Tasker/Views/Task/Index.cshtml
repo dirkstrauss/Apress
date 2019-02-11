@@ -1,29 +1,86 @@
 ﻿@model IEnumerable<Tasker.Models.Task>
 @{
     ViewBag.Title = "Index";
+
+    var iTaskCount = 0;
+    iTaskCount = Model.Count();
 }
 
-<h2>Index</h2>
+@if (iTaskCount > 1)
+{
+    <h2>You have @iTaskCount Tasks</h2>
+}
+else if (iTaskCount > 0)
+{
+    <h2>You only have @iTaskCount Task</h2>
+}
+else
+{
+    <h2>You have no Tasks</h2>
+}
+
+<button type="button" class="btn btn-primary" id="btn-order-default">Original</button>
+<button type="button" class="btn btn-danger" id="btn-order-name">Critical Tasks</button>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 task-pipeline">
-            <div><h2>Pipeline</h2></div>
+        <div class="col-md-4 task-pipeline-heading"><h2>Pipeline</h2></div>
+        <div class="col-md-4 task-in-progress-heading"><h2>In progress</h2></div>
+        <div class="col-md-4 task-completed-heading"><h2>Completed</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 task-pipeline">            
             @foreach (var item in Model)
             {
-                <div class="task">
-                    <div class="task-id">@item.TaskID</div>
-                    <div class="task-title">@item.TaskTitle</div>
-                    <div class="task-body">@item.TaskBody</div>
-                    <div class="task-date">@item.DueDate.ToString("MMMM dd, yyyy")</div>
+                <div class="task @(item.DueDate <= DateTime.Now.AddDays(1) ? "critical" : "")">
+                    <div class="task-id">
+                        @item.TaskID
+                    </div>
+                    <div class="task-title">
+                        @item.TaskTitle
+                    </div>
+                    <div class="task-body">
+                        @item.TaskBody
+                    </div>
+                    <div class="task-date">
+                        @item.DueDate.ToString("MMMM dd, yyyy")
+                    </div>
                 </div>
             }
         </div>
-        <div class="col-md-4 task-in-progress" id="inprogress">
-            <div><h2>In progress</h2></div>
+        <div class="col-md-4 task-in-progress" id="inprogress">            
         </div>
-        <div class="col-md-4 task-completed">
-            <div><h2>Completed</h2></div>
+        <div class="col-md-4 task-completed">            
         </div>
     </div>
 </div>
+
+
+
+@section scripts {
+    <script type="text/javascript">
+
+        var $grid;
+        
+        $(function () {
+            $(".task").draggable(); 
+
+            $grid = $('.task-pipeline').isotope({
+                // options
+                itemSelector: '.task'                
+            });
+
+            $("#btn-order-default").click(function () {                
+                $grid = $grid.isotope({ filter: '*' });
+            });
+
+            $("#btn-order-name").click(function () {                
+                $grid = $grid.isotope({ filter: '.critical' });
+            });
+        });
+    </script>
+}
+
+
+
+

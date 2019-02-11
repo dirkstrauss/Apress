@@ -78,6 +78,8 @@ In your Solution Explorer, if you expand the App_Start folder you will see a cla
 ## Setting up and using SCSS
 SCSS is an implementation of SASS (Syntactically Awesome Style Sheets). In fact, SASS supports two types of syntax namely SCSS and SASS. The main difference between SCSS and SASS is the use of curly braces and semicolons that SCSS uses. Being used to C#, it makes more sense to use SCSS. SCSS is fully compliant with CSS, so all your existing code will still work.
 
-## Creating Views and using Razor
+## Creating Models, Controllers, Views and using Razor
 The whole premise of MVC is to separate concerns based on the role of each part of your application. As you probably know, MVC stands for Model, View and Controller. Let's see how this all fits together.
-'
+
+## Adding a plugin
+Sometimes you might want to add additional functionality to a web application. Sure, you can definitely roll your own, but why reinvent the wheel if the functionality exists in a plugin?

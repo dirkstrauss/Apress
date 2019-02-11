@@ -1,5 +1,34 @@
 ﻿@import "_variables.scss";
 
-h2{
-    color: $h2-color;
+.task {
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+
+    .task-id {
+        display: none;
+    }
+
+    .task-title {
+        font-weight: bold;
+    }
+}
+
+.task-pipeline, .task-in-progress, .task-completed {
+    min-height: 500px;
+}
+
+.task-pipeline, .task-pipeline-heading {
+    background-color: powderblue;
+}
+
+.task-in-progress, .task-in-progress-heading {
+    background-color: thistle;
+    z-index: -1;
+}
+
+.task-completed, .task-completed-heading {
+    background-color: plum;
+    z-index: -1;
 }

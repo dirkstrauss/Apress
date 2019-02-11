@@ -30,6 +30,9 @@ namespace Tasker
                 .Include("~/Content/bootstrap.css",
                       "~/Content/customstyles.css"));
 
+            bundles.Add(new ScriptBundle("~/bundles/isotope")
+                .Include("~/Scripts/isotope.pkgd.min.js"));
+
         }
     }
 }
