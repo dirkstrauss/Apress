@@ -1,4 +1,5 @@
 ﻿/* Header Colors */
+/* Header Colors */
 .task {
   border: 1px solid blue;
   border-radius: 5px;
@@ -22,3 +23,8 @@
 .task-completed, .task-completed-heading {
   background-color: plum;
   z-index: -1; }
+
+@media (max-width: 576px) {
+  .task-pipeline-heading, .task-in-progress-heading, .task-completed-heading {
+    display: none;
+    margin-bottom: 20px; } }

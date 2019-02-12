@@ -178,6 +178,7 @@
     <Content Include="scss\customstyles.scss" />
     <Content Include="scss\_variables.scss" />
     <Content Include="Views\Task\Index.cshtml" />
+    <Content Include="scss\_mixins.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
