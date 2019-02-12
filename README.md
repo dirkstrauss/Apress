@@ -83,3 +83,9 @@ The whole premise of MVC is to separate concerns based on the role of each part 
 
 ## Adding a plugin
 Sometimes you might want to add additional functionality to a web application. Sure, you can definitely roll your own, but why reinvent the wheel if the functionality exists in a plugin?
+
+## Testing your responsive layout using Chrome
+The Google Chrome browser has definitely become one of the most popular browsers in the world today. The power of being able to add functionality to the browser with extensions, allows users to make it their own. For developers, it also provides a host of features in the form of Chrome's Developer Tools.
+
+## Debugging your jQuery using Chrome Developer Tools
+Being able to debug your jQuery and JavaScript gives you complete control over the code you write. No more guessing and hit and miss attempts at debugging errors (here's looking at you SYSPRO VbScript devs). You can write your jQuery and use Chrome Developer Tools with complete confidence to debug your code.

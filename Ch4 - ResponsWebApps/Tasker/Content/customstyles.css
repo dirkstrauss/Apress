@@ -4,7 +4,8 @@
   border: 1px solid blue;
   border-radius: 5px;
   padding: 5px;
-  margin: 5px; }
+  margin: 5px;
+  background-color: transparent; }
   .task .task-id {
     display: none; }
   .task .task-title {
@@ -24,7 +25,6 @@
   background-color: plum;
   z-index: -1; }
 
-@media (max-width: 576px) {
+@media (max-width: 414px) {
   .task-pipeline-heading, .task-in-progress-heading, .task-completed-heading {
-    display: none;
-    margin-bottom: 20px; } }
+    display: none; } }
