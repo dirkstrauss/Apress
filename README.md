@@ -89,3 +89,5 @@ The Google Chrome browser has definitely become one of the most popular browsers
 
 ## Debugging your jQuery using Chrome Developer Tools
 Being able to debug your jQuery and JavaScript gives you complete control over the code you write. No more guessing and hit and miss attempts at debugging errors (here's looking at you SYSPRO VbScript devs). You can write your jQuery and use Chrome Developer Tools with complete confidence to debug your code.
+
+# Chapter 5 - Getting started with .NET Core 3.0
