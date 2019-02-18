@@ -91,3 +91,19 @@ The Google Chrome browser has definitely become one of the most popular browsers
 Being able to debug your jQuery and JavaScript gives you complete control over the code you write. No more guessing and hit and miss attempts at debugging errors (here's looking at you SYSPRO VbScript devs). You can write your jQuery and use Chrome Developer Tools with complete confidence to debug your code.
 
 # Chapter 5 - Getting started with .NET Core 3.0
+
+## Creating apps
+These days it's hard to do anything online without hearing the word .NET Core . It might leave some wondering exactly what it is. Well, .NET Core is an open -source development platform that is maintained on Github by Microsoft and the .NET Community. It allows developers to write applications that suppo rt Windows, Linux and macOS.
+
+## What is new in .NET Core 3.0
+There are a host of new features in .NET Core 3.0, some of which I will not discuss. I will however, highlight some of the more interesting features such as Windows desktop, support for C#8, default executables, fast built-in JSON support and Cryptography.
+
+## Installing .NET Core 3.0 Preview on Linux with Snap
+The recommended way to install .NET Core 3.0 Preview on Linux is via Snap.
+
+## Create and Run an ASP.NET MVC app on Linux
+See what you need to do to get your ASP.NET Core MVC app up and running on Linux.
+
+##Edit your ASP.NET Core MVC app on Linux
+Microsoft has done a huge amount of work to bring Visual Studio to all platforms. Visual Studio Code gives developers a fantastic IDE for creating applications on Linux and macOS. I even use it daily on my Windows Desktop if I need to quickly work on a file.
+
