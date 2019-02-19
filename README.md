@@ -92,7 +92,7 @@ Being able to debug your jQuery and JavaScript gives you complete control over t
 
 # Chapter 5 - Getting started with .NET Core 3.0
 
-## Creating apps
+## Creating .NET Core Apps in Visual Studio 2019
 These days it's hard to do anything online without hearing the word .NET Core . It might leave some wondering exactly what it is. Well, .NET Core is an open -source development platform that is maintained on Github by Microsoft and the .NET Community. It allows developers to write applications that suppo rt Windows, Linux and macOS.
 
 ## What is new in .NET Core 3.0
@@ -104,6 +104,8 @@ The recommended way to install .NET Core 3.0 Preview on Linux is via Snap.
 ## Create and Run an ASP.NET MVC app on Linux
 See what you need to do to get your ASP.NET Core MVC app up and running on Linux.
 
-##Edit your ASP.NET Core MVC app on Linux
+## Edit your ASP.NET Core MVC app on Linux with Visual Studio Code
 Microsoft has done a huge amount of work to bring Visual Studio to all platforms. Visual Studio Code gives developers a fantastic IDE for creating applications on Linux and macOS. I even use it daily on my Windows Desktop if I need to quickly work on a file.
 
+## Debug your ASP.NET Core MVC project with Visual Studio Code
+Visual Studio Code allows you to debug your code. You need to do a little heavy lifting to get this all set up, but once you have done this, you're all sorted.
