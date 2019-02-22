@@ -112,5 +112,5 @@ Visual Studio Code allows you to debug your code. You need to do a little heavy 
 
 # Chapter 6 - Being more productive in Visual Studio 2019
 
-## Visual Studio Code Tips
+## Visual Studio - General Code Tips
 In this section of the book we will be looking at some general Visual Studio tips. You can use these in Visual Studio to improve your code and become more productive in your day-to-day coding.
