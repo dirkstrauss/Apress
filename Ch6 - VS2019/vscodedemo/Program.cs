@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Console;
+﻿using static System.Console;
 
 namespace vscodedemo
 {
@@ -40,11 +35,23 @@ namespace vscodedemo
             //    WriteLine($"{cl} is a class A stock code in the 200 plus range");
             //}
 
-            string FirstName = "Dirk";
-            string LastName = "Strauss";
-            string FullName = string.Format("My name is {0} {1}", FirstName, LastName);
+            //string FirstName = "Dirk";
+            //string LastName = "Strauss";
+            //string FullName = string.Format("My name is {0} {1}", FirstName, LastName);
 
+            NotSuchNiceCode();
             ReadLine();
+        }
+
+        public static void NotSuchNiceCode()
+        {            
+            ZeroValue(out int iValue);
+            WriteLine($"The variable changed to: {iValue}");
+        }
+
+        public static void ZeroValue(out int iValue)
+        {
+            iValue = 0;
         }
     }
 }
