@@ -115,5 +115,20 @@ Visual Studio Code allows you to debug your code. You need to do a little heavy 
 ## New features in Visual Studio 2019
 Visual Studio 2019 brings what matters most to developers, in a more condensed and focusd way by providing a fresh perspective on the UI.
 
+## Visual Studio Live Share
+Visual Studio Live Share is a fantastic service that allows you to "phone a friend" essentially. You can share your codebase and its context with a colleague and collaborate with them right from within Visual Studio.
+
 ## Refactorings and code fixes
 In this section of the book we will be looking at some general Visual Studio tips. You can use these in Visual Studio to improve your code and become more productive in your day-to-day coding.
+
+## Enable JavaScript debugging in ASP.NET projects
+If you create a new browser config in the Browse with menu for an ASP.NET project, Visual Studio 2019 will enable JavaScript debugging for your project when you launch your debug session.
+
+## Exporting your editor settings
+TBC
+
+## Visual Studio IntelliCode using AI
+TBC
+
+## General Visual Studio Tips
+TBC
