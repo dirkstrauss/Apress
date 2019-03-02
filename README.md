@@ -125,10 +125,10 @@ In this section of the book we will be looking at some general Visual Studio tip
 If you create a new browser config in the Browse with menu for an ASP.NET project, Visual Studio 2019 will enable JavaScript debugging for your project when you launch your debug session.
 
 ## Exporting your editor settings
-TBC
+If you are working in a team, you can use a file called an EditorConfig file to enforce certain coding styles for your project. The nice thing about an EditoConfig file is the fact that you can check it in to source control and have it travel with each new pull of the repo.
 
 ## Visual Studio IntelliCode using AI
-TBC
+In 2018 during Build, Microsoft announced the AI powered Visual Studio IntelliCode. It is aimed at improving the productivity of developers by providing recommendations on contextual code completion, inferring style rules and code formatting. It is available for Visual Studio 2017, 2019 and Visual Studio Code as an optional extension.
 
 ## General Visual Studio Tips
-TBC
+Visual Studio offers you so much flexibility in what you can do. It is the gold standard of IDE's in my opinion. As mentioned earlier in this chapter, some of the finer tips and features might get overlooked. 

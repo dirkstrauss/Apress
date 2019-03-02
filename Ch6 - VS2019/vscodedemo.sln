@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vscodedemo", "vscodedemo\vs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vscodewebdemo", "vscodewebdemo\vscodewebdemo.csproj", "{92073FDB-0209-436C-8049-4ACFE669154B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vscodedemoTests", "vscodedemoTests\vscodedemoTests.csproj", "{94405B63-A5B6-465D-84BC-1748F7C27CE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{92073FDB-0209-436C-8049-4ACFE669154B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92073FDB-0209-436C-8049-4ACFE669154B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92073FDB-0209-436C-8049-4ACFE669154B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94405B63-A5B6-465D-84BC-1748F7C27CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94405B63-A5B6-465D-84BC-1748F7C27CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94405B63-A5B6-465D-84BC-1748F7C27CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94405B63-A5B6-465D-84BC-1748F7C27CE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
