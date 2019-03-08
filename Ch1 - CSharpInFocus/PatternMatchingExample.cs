@@ -79,7 +79,7 @@ namespace CSharpInFocus
             //    case ExchangeStudent exchangeStudent:
             //        return $"{exchangeStudent.ExchangeStudentDetails().fullName} has {exchangeStudent.ExchangeStudentDetails().daysLeftOnVisa} days left on Student Visa";
             //}
-
+                        
 
             //// Using mutiple case labels in switch statements
             //switch (someperson)

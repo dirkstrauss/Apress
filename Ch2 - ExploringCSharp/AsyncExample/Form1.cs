@@ -38,7 +38,7 @@ namespace AsyncExample
                 string line = string.Empty;
                 while ((line = await reader.ReadLineAsync().ConfigureAwait(false)) != null)
                 {
-                    
+
                     FileLines.Add(line);
                     lineCount += 1;
 
@@ -49,10 +49,10 @@ namespace AsyncExample
                     else
                     {
                         lblLinesRead.Text = lineCount.ToString();
-                    }                    
+                    }
                 }
             }
-            
+
             return lineCount;
         }
 
@@ -78,11 +78,7 @@ namespace AsyncExample
         //{
         //    // Some work is done here
         //}
-        
-
-
-
-
+                           
 
 
     }

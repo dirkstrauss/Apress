@@ -7,6 +7,7 @@ using static System.Console;
 using System.Drawing;
 using System.Data.SqlClient;
 
+
 namespace NewCSharp
 {
     class Program
@@ -40,48 +41,21 @@ namespace NewCSharp
             #endregion
 
             #region Ranges and Indicies
-            //string[] names = { "Dirk", "Jane", "James", "Albert", "Sally" };
-            //foreach (var name in names[1..^1])
-            //{
+            string[] names = { "Dirk", "Jane", "James", "Albert", "Sally" };
+            foreach (var name in names[1..^1])
+            {
+                // do something
+            }
+            Range range = 1..4;
+            foreach (var name in names[range])
+            {
+                // do something
+            }
 
-            //}
-            //Range range = 1..4;
-            //foreach (var name in names[range])
-            //{
-
-            //}
-
-            //foreach (var name in names[1..4])
-            //{
-
-            //}
-
-            //SortedList<int, string> personList = new SortedList<int, string>();
-
-            //Person dirk = new Person("Dirk", 40, true);
-            //Person jane = new Person("Jane", 63, false);
-            //Person james = new Person("James", 51, true);
-            //Person albert = new Person("Albert", 22, false);
-            //Person sally = new Person("Sally", 14, false);
-
-            //personList.Add(dirk.Age, dirk.Name);
-            //personList.Add(jane.Age, jane.Name);
-            //personList.Add(james.Age, james.Name);
-            //personList.Add(albert.Age, albert.Name);
-            //personList.Add(sally.Age, sally.Name);
-
-            //foreach (var person in personList)
-            //{
-            //    WriteLine($"{person.Value} is {person.Key} years old.");
-            //}
-            //WriteLine("---");
-
-            //Range range = 1..4;
-
-            //foreach (var person in personList[1..4])
-            //{
-            //    WriteLine($"{person.Value} is {person.Key} years old.");
-            //} 
+            foreach (var name in names[1..4])
+            {
+                // do something
+            }
             #endregion
 
             #region Switch expressions
@@ -174,10 +148,28 @@ namespace NewCSharp
 
             //WriteLine(cmd.CommandText);
             #endregion
-                       
+
 
             ReadLine();
         }
+    }
+
+    
+}
+
+
+public class Person
+{
+    public int Age { get; }
+    public string Name { get; }
+    public bool RegisteredToVote { get; set; }
+    public bool EligibleToVote { get => Age > 18; }
+
+    public Person(string name, int age, bool registered)
+    {
+        Name = name;
+        Age = age;
+        RegisteredToVote = registered;
     }
 }
 
